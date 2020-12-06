@@ -34,12 +34,14 @@ function new_text(){
     document.getElementById("save").style.display= "";
     document.getElementById("cancel").style.display = "";
     document.getElementById("textbox").style.display = "";
+    document.getElementById('textbox').value = "";
 }
 
 var notes_array = [{title: "note one", body: "abc"}, {title: "note two", body: "123"}]
 
 function change_textarea(spot){
-    document.getElementById('textbox').innerText = notes_array[spot].body
+    document.getElementById('textbox').value = "";
+    document.getElementById('textbox').value = notes_array[spot].body
 }
 
 function update_array(){
@@ -53,10 +55,9 @@ function update_array(){
     console.log(`added ${firstLine} and ${restOfLines}`);
 
     var listItem = document.createElement("li");
-    var titleName = document.createElement("p");
     var listhead = document.getElementById("notes");
     
-    listItem.innerHTML = `<p onclick= "change_textarea(${notes_array.length-1})">${firstLine}</p>`;
+    listItem.innerHTML = `<li onclick= "change_textarea(${notes_array.length-1})">${firstLine}</li>`;
     listhead.appendChild(listItem);
 
     console.log(notes_array)

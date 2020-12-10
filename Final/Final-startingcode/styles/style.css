@@ -1,23 +1,37 @@
 html {
     font-family: 'Montserrat', sans-serif;
 }
-
+header{
+    margin: auto;
+    width: 80%;
+}
 header h1{
     text-align: center;
 }
 
-.displayed-img {
+
+
+
+.display-pic{
+    margin:auto;
     width: 80%;
+}
+.displayed-img {
+    display: flex;
+    margin: auto;
+    width: 100%;
 }
 
 #thumb-bar{
+    margin:auto ;
+    width:80%;
     display:flex;
     flex-direction: row;
     align-items: center;
 }
 
 #thumb-bar >img {
-    width:16%;
+    width:20%;
 }
 
 section{
@@ -30,12 +44,23 @@ section{
 
 
 @media screen and (min-width: 640px){
-    #displayed-img{
-        width: 640px
+    header{
+        width:640px;
+    }
+    .display-pic{
+        align-self: center;
+        width: 640px;
+        margin: auto;
+    }
+
+    #thumb-bar{
+        width: 640px;
     }
 
     section{
-        width: 80%;
+        margin:auto;
+        margin-top: 1%;
+        width: 640px;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;

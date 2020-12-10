@@ -15,12 +15,13 @@
             <p>Hover on any thumbnail to see it bigger</p>
         </header>
         <div id="thumb-bar"> </div>
-        <img src="images/pic5.jpg" class="displayed-img">
-
+        <div class ="display-pic">
+            <img src="images/pic5.jpg" class="displayed-img" id ="displayed">
+        </div>
         <section>
             <label>What effect do you want to apply?</label>
             <input id="effect" type="text">
-            <button>Submit</button>
+            <button onclick= "blurImage()">Submit</button>
         </section>
     </body>
 
